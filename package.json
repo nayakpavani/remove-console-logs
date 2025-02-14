@@ -1,0 +1,23 @@
+{
+  "name": "removelogs",
+  "displayName": "Remove Logs Extension",
+  "description": "This extension removes console.log statements from JavaScript files.",
+  "version": "1.2.0",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "activationEvents": [
+    "onCommand:removelogs.removeLogsFromAllFiles"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "removelogs.removeLogsFromAllFiles",
+        "title": "Remove Logs"
+      }
+    ]
+  },
+  "dependencies": {}
+}
