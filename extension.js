@@ -8,7 +8,7 @@ function activate(context) {
 
   // Register the command to remove console logs
   const disposable = vscode.commands.registerCommand(
-    "removelogs.removeLogsFromAllFiles",
+    "removelogs.removeConsoleLogsFromAllFiles",
     async function () {
       // Get all files in the workspace
       const workspaceFolders = vscode.workspace.workspaceFolders;

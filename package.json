@@ -1,9 +1,14 @@
 {
-  "name": "removelogs",
-  "displayName": "Remove Logs Extension",
-  "description": "This extension removes console.log statements from JavaScript files.",
-  "version": "1.2.0",
-  "publisher": "your-publisher-name",
+  "name": "remove-console-logs",
+  "displayName": "Remove Console Logs",
+  "description": "This extension removes console.log statements and replaces console.log to console.error in catch blocks in Vue and JavaScript files.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nayakpavani/remove-console-logs"
+  },
+  "icon": "images/icon.png",
+  "version": "1.0.0",
+  "publisher": "NayakPavani",
   "engines": {
     "vscode": "^1.0.0"
   },
@@ -14,8 +19,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "removelogs.removeLogsFromAllFiles",
-        "title": "Remove Logs"
+        "command": "removelogs.removeConsoleLogsFromAllFiles",
+        "title": "Remove Console Logs From All Files"
       }
     ]
   },
