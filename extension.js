@@ -58,13 +58,13 @@ function activate(context) {
 function processConsoleLogsInCatchBlocks(code) {
   // Replace console.log inside catch blocks with console.error
   const catchBlockWithConsoleLogRegex =
-    /(catch\s*\([^\)]*\)\s*{[^}]*?)\s*console\.log\(([^)]*)\);/g;
+    /(catch\s*\([^\)]*\)\s*{[^}]*?)\s*console\.log\(([^)]*)\);?/g;
 
   // Replace console.log with console.error inside catch blocks
   let updatedCode = code.replace(
     catchBlockWithConsoleLogRegex,
     (match, catchBlock, logContent) => {
-      return `${catchBlock} console.error(${logContent});`;
+      return `${catchBlock}\n console.error(${logContent});`;
     }
   );
 
