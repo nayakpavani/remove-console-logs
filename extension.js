@@ -58,7 +58,7 @@ function activate(context) {
 function processConsoleLogsInCatchBlocks(code) {
   // Replace console.log inside catch blocks with console.error
   const catchBlockWithConsoleLogRegex =
-    /(catch\s*\([^\)]*\)\s*{[^}]*?)\s*console\.log\(([^)]*)\);?/g;
+    /(catch\s*\([^\)]*\)\s*{[^}]*?)\bconsole\.log\(([^)]*)\);?/g;
 
   // Replace console.log with console.error inside catch blocks
   let updatedCode = code.replace(
@@ -68,8 +68,12 @@ function processConsoleLogsInCatchBlocks(code) {
     }
   );
 
-  // Remove any other console.log outside of catch blocks
-  updatedCode = updatedCode.replace(/console\.log\([^\)]*\);?/g, "");
+  // Remove console.log statements outside of catch blocks, but not if they are inside comments
+  const consoleLogRegex = /(?<!\/\/.*)\bconsole\.log\([^)]*\);?/g;
+
+  updatedCode = updatedCode.replace(consoleLogRegex, (match) => {
+    return ""; // Remove non-commented console.log statements
+  });
 
   return updatedCode;
 }
