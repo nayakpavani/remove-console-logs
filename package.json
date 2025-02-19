@@ -20,7 +20,7 @@
     "commands": [
       {
         "command": "removelogs.removeConsoleLogsFromAllFiles",
-        "title": "Log Cleanup: Remove Debug Logs & Enhance Errors"
+        "title": "Log Cleanup: Remove Console Logs & Add Console Errors"
       }
     ]
   },
