@@ -1,7 +1,7 @@
 {
   "name": "remove-console-logs",
-  "displayName": "Log Remover for JS & Vue,Jsx",
-  "description": "This extension removes console.log statements and replaces console.log to console.error in catch blocks in Vue and JavaScript files.",
+  "displayName": "Log Remover for JS, Vue & JSX",
+  "description": "This extension removes console.log statements and replaces console.log to console.error in catch blocks in Vue,React and JavaScript files.",
   "repository": {
     "type": "git",
     "url": "https://github.com/nayakpavani/remove-console-logs"
