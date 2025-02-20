@@ -56,7 +56,7 @@ function activate(context) {
 
       let filesToProcess = Object.values(fileMap); // All files by default
 
-      if (userChoice === "Specify Files  to Include") {
+      if (userChoice === "Specify Files to Include") {
         // Let the user pick files to process
         const selectedFiles = await vscode.window.showQuickPick(fileLabels, {
           placeHolder:
