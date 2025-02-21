@@ -40,7 +40,7 @@ function activate(context) {
       const userChoice = await vscode.window.showQuickPick(
         [
           "Remove Logs from All Files",
-          "Specify Files  to Include",
+          "Specify Files to Include",
           "Specify Files to Exclude",
           "Cancel",
         ],
